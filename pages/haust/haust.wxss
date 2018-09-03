@@ -1,0 +1,41 @@
+
+.swiper{
+  margin: -15rpx;
+  height: 400rpx;
+  width: 110%;
+}
+.slide-image{
+  height: 500rpx;
+  width: 100%;
+}
+.head_text{
+  display: block;
+  margin-top: 20rpx;
+  margin-left: 20px;
+  font-size: 60rpx;
+  font-family: "隶书";
+  color: #02379c;
+}
+.head_text_english{
+  display: block;
+  margin-left: 20px;
+  font-size: 30rpx;
+  font-family: "隶书";
+  color: #02379c;
+}
+
+.info_text{
+ font-size: 15px;
+  font-family: cursive;
+  display: block;
+  color: gray;
+  text-align: left;
+  margin:15px;
+}
+
+.time_text{
+  display: block;
+  margin-left: 20px;
+  font-size: 20rpx;
+  opacity: 0.5;
+}

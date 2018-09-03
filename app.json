@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/haust/haust",
+    "pages/map/map",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#02379c",
+    "navigationBarTitleText": "河南科技大学",
+    "navigationBarTextStyle":"white"
+  }
+}

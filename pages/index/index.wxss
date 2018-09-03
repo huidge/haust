@@ -1,0 +1,33 @@
+
+page {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.huidge.top/test/bg.jpg');
+  background-repeat:round;
+}
+
+.button_container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left:35%;
+  justify-content: center;
+  color: white;
+}
+
+.button {
+  width: 145rpx;
+  height: 145rpx;
+  margin: 20px;
+  background-color:#02379c;
+  border-radius: 80rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.button text {
+  width: 55%;
+  align-self: center;
+  text-align: center;
+}

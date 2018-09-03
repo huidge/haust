@@ -1,0 +1,8 @@
+  <view class="button_container">
+    <navigator class="button" url="../haust/haust">
+      <text>科大简介</text>
+    </navigator>
+    <navigator class="button" url="../map/map">
+      <text>逛逛科大</text>
+    </navigator>
+  </view>
