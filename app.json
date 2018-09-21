@@ -1,8 +1,14 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/navigation/navigation",
+    "pages/navigation/detail",
+    "pages/navigation/polyline",
+    "pages/navigation/search",
     "pages/haust/haust",
+    "pages/form/form",
     "pages/map/map",
+    
     "pages/logs/logs"
   ],
   "window":{

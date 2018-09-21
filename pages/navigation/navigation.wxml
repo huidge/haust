@@ -1,0 +1,45 @@
+<view id="top" style="width:100%; height:6vh" wx:if="{{!hide}}">
+    <view id="campus" style="width:170rpx" wx:if="{{!isDraw}}">
+        <view bindtap="changeCampus" id="campus-border">
+            <label id="campus-label">{{current_campus}}</label>
+        </view>
+    </view>
+    <scroll-view hidden="{{isDraw}}" scrollIntoView="{{todirview}}" scrollWithAnimation="true" scrollX="true" style="width:510rpx">
+        <view class="top-switch" style="width:{{markers.length*105}}rpx; height:85%">
+            <view bindtap="changeDirectory" class="top-places-btn{{isSelectedLocationDirectory==index?'-selected':''}}" id="{{index}}" style="color:white" wx:for="{{markers}}" wx:key="id">
+                <view id="to{{index}}">{{item.name}}</view>
+            </view>
+        </view>
+    </scroll-view>
+    <view style="width:680rpx; color:white; margin-left: 30rpx;" wx:if="{{isDraw}}">请选择一个分类</view>
+    <view bindtap="touchDraw" id="btn-draw" style="width:90rpx">
+        <image id="btn-draw-image" mode="aspectFit" src="/resources/icon/draw-{{isDraw?'up':'down'}}.png"></image>
+    </view>
+</view>
+<view hidden="{{isDraw}}" id="center" wx:if="{{unReloadMap}}">
+    <map showLocation bindcontroltap="bindcontroltap" bindmarkertap="markerschange" controls="{{controls}}" id="map" includePoints="{{markers[isSelectedLocationDirectory].data}}" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers[isSelectedLocationDirectory].data}}" scale="{{scale}}" style="width:100%; height:{{hide?93:50}}vh;" zIndex="0"></map>
+</view>
+<scroll-view scrollY="true" style="width:100%; height: 50vh;" wx:if="{{isDraw}}">
+    <view class="drawArea">
+        <view bindtap="drawChangeDirectory" class="draw-border-btn{{isSelectedLocationDirectory==index?'-selected':''}}" id="{{index}}" wx:for="{{markers}}">
+            <label>{{item.name}}</label>
+        </view>
+    </view>
+</scroll-view>
+<button bindtap="hideList" class="show-hide-btn" hoverStartTime="0" style="height:7vh">共有{{markers[isSelectedLocationDirectory].data.length}}个{{markers[isSelectedLocationDirectory].name}}（{{hide?'显示':'隐藏'}}）</button>
+<scroll-view disabled="true" hidden="{{hide}}" id="bottom" scrollIntoView="{{toitemview}}" scrollTop="{{upmost}}" scrollWithAnimation="true" scrollY="true" style="width: 100%; height: 37vh;">
+    <view class="placesItem" id="to{{item.id}}" wx:for="{{markers[isSelectedLocationDirectory].data}}">
+        <view class="placesItemView">
+            <navigator class="navPlacesToProfile" hoverClass="none" url="detail?sld={{isSelectedLocationDirectory}}&sl={{index}}">
+                <image class="itemImg" mode="scaleToFill" src="{{item.img}}"></image>
+                <view class="itemcontent">
+                    <view class="itemName">{{item.name}}</view>
+                    <view class="locationText icon-shouye">{{item.profile}}</view>
+                </view>
+            </navigator>
+            <navigator class="navPlacesToPolyline" hoverClass="none" url="polyline?latitude={{markers[isSelectedLocationDirectory].data[index].latitude}}&longitude={{markers[isSelectedLocationDirectory].data[index].longitude}}&name={{markers[isSelectedLocationDirectory].data[index].name}}">
+                <image class="itemPolyline" src="/resources/icon/location.png"></image>
+            </navigator>
+        </view>
+    </view>
+</scroll-view>

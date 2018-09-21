@@ -2,7 +2,15 @@
     <navigator class="button" url="../haust/haust">
       <text>科大简介</text>
     </navigator>
-    <navigator class="button" url="../map/map">
+    <navigator class="button" url="../navigation/navigation">
       <text>逛逛科大</text>
     </navigator>
   </view>
+
+<button open-type="share" class="float_button_share">
+<image class="float_img"  src='../../image/share.png'></image>
+</button>
+
+<button open-type="contact" class="float_button_contact">
+<image class="float_img"  src='../../image/contact.png'></image>
+</button>

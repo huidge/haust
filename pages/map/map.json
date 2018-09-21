@@ -1,1 +1,6 @@
-{}
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#02379c",
+  "navigationBarTitleText": "导览服务",
+  "navigationBarTextStyle": "white"
+}

@@ -61,6 +61,9 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    return {
+      title: '分享给你一个科大人都在用的校园导览小程序',
+      path: '/pages/index/index'
+    }
   }
 })

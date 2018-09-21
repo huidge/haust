@@ -39,3 +39,44 @@
   font-size: 20rpx;
   opacity: 0.5;
 }
+.button_container {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top:-250rpx;
+  color: white;
+}
+ @keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+            0%{
+                transform: scale(0.8);  /*开始为原始大小*/
+            }
+            25%{
+                transform: scale(1.1); /*放大1.1倍*/
+            }
+            50%{
+                transform: scale(0.8);
+            }
+            75%{
+                transform: scale(1.1);
+            }
+            100%{
+                transform: scale(0.8);
+            }
+        }
+.button {
+  width: 145rpx;
+  height: 145rpx;
+  margin: 20px;
+  background-color:#02379c;
+  border-radius: 80rpx;
+  display: flex;
+  justify-content: center;
+  -webkit-animation: scaleDraw 5s ease-in-out infinite;
+}
+
+.button text {
+  width: 55%;
+  align-self: center;
+  text-align: center;
+}

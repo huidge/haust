@@ -1,0 +1,18 @@
+<view>
+    <image class="exhibition" mode="scaleToFill" src="{{locationData.img}}"></image>
+    <view class="navgation">
+        <navigator class="nav-places-to-polyline" hoverClass="none" url="polyline?latitude={{locationData.latitude}}&longitude={{locationData.longitude}}&name={{locationData.name}}">
+            <image class="nav-places-to-polyline-img" mode="scaleToFill" src="/resources/icon/location.png"></image>
+        </navigator>
+    </view>
+    <view style="display:flex;flex-direction: row; justify-content: center;">
+        <text class="location-name" style="width:90%; height:100rpx;">{{locationData.name}}</text>
+    </view>
+    <view style="height:30rpx; background-color:#F2F2F2;"></view>
+    <view class="location-description">
+        <text class="subtitle">地点介绍</text>
+    </view>
+    <view class="content">
+        <rich-text class="article-content" nodes="{{locationData.description}}"></rich-text>
+    </view>
+</view>

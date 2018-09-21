@@ -9,6 +9,9 @@
 <view>
 <text class='head_text'>河南科技大学简介</text>
 <text class='head_text_english'>Henan University of Science and Technology</text>
+<view class="button_container">
+<navigator class="button" url="../navigation/navigation"><text>地图导航</text></navigator>
+</view>
 <!--<text class='time_text'>{{time}}</text>-->
 <text class='info_text'>
 河南科技大学(简称河科大，英文简称：HAUST)坐落于“千年帝都，牡丹花城”、中原城市群副中心城市—洛阳，是国家国防科工局与河南省人民政府共建高校、国家中西部高校基础能力建设工程支持高校、国家教育部本科教学水平评估优秀高校，也是河南省重点建设的三所综合性大学之一、“丝绸之路大学联盟”理事高校、全国深化创新创业教育改革示范高校和国家级专业技术人员继续教育基地。

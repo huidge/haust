@@ -1,0 +1,22 @@
+<view class="route-method" style="width: 100%; height: 7vh" wx:if="{{!start}}">
+    <view bindtap="drivingRoute" class="method{{driving?'-selected':''}}">
+        <image class="method-img" src="/resources/icon/driving.png" wx:if="{{!driving}}"></image>
+        <text class="method-text" wx:if="{{driving}}">驾驶</text>
+    </view>
+    <view bindtap="walkingRoute" class="method{{walking?'-selected':''}}">
+        <image class="method-img" src="/resources/icon/walking.png" wx:if="{{!walking}}"></image>
+        <text class="method-text" wx:if="{{walking}}">步行</text>
+    </view>
+    <view bindtap="ridingRoute" class="method{{riding?'-selected':''}}">
+        <image class="method-img" src="/resources/icon/riding.png" wx:if="{{!riding}}"></image>
+        <text class="method-text" wx:if="{{riding}}">骑行</text>
+    </view>
+</view>
+<map showLocation bindregionchange="{{start?regionchange:''}}" bindtap="stopNavigation" includePoints="{{markers}}" latitude="{{start?latitude:''}}" longitude="{{start?longitude:''}}" markers="{{markers}}" polyline="{{polyline}}" scale="{{start?100:''}}" style="width:100%; height:{{start?100:84}}vh;" zIndex="1000000"></map>
+<view class="bottom" style="height: 9vh" wx:if="{{!start}}">
+    <text class="distance">{{distance}}</text>
+    <view class="button-navigation">
+        <button bindtap="openlocation" class="startNavigation" style="margin-right:20rpx;">外部导航</button>
+        <button bindtap="startNavigation" class="startNavigation">{{started?'继续导航':'开始导航'}}</button>
+    </view>
+</view>

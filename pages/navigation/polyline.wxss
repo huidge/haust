@@ -1,0 +1,66 @@
+.route-method {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.method {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.method-selected {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.method-img {
+    width: 50rpx;
+    height: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.method-text {
+    font-size: 30rpx;
+    padding: 10rpx;
+    padding-right: 40rpx;
+    padding-left: 40rpx;
+    color: white;
+    background-color: #2196F3;
+    border-radius: 26rpx;
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.distance {
+    margin-left: 40rpx;
+}
+
+.button-navigation {
+    display: flex;
+}
+
+.startNavigation {
+    color: white;
+    background-color: #2196F3;
+    height: 65rpx;
+    font-size: 30rpx;
+    display: flex;
+    align-items: center;
+    margin-right: 40rpx;
+}
+
+button::after {
+    border: none;
+}

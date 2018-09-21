@@ -1,0 +1,53 @@
+<view class="search" style="height: 6vh">
+    <view class="search-icon">
+        <icon color="#015BA3" size="16" type="search"></icon>
+    </view>
+    <view class="search-form">
+        <form>
+            <input bindinput="bindSearchInput" focus="true" name="search" placeholder="请输入地点关键词" style="font-size: 30rpx;" type="text" value="{{keyword}}"></input>
+        </form>
+    </view>
+    <view bindtap="reset" class="search-icon">
+        <icon color="#015BA3" size="16" type="cancel"></icon>
+    </view>
+</view>
+<scroll-view hidden="{{showData==null}}" id="bottom" scrollWithAnimation="true" scrollY="true" style="width: 100%; height: 90vh">
+    <view class="search-type">
+    校内搜索
+  </view>
+    <view class="placesItem" wx:for="{{showData}}">
+        <view class="placesItemView">
+            <navigator class="navPlacesToProfile" hoverClass="none" url="detail?sld={{item.tid}}&sl={{item.bid}}">
+                <image class="itemImg" mode="scaleToFill" src="{{item.img}}"></image>
+                <view class="itemcontent">
+                    <view class="itemName">{{item.name}}</view>
+                    <view class="locationText icon-shouye">{{item.profile}}</view>
+                </view>
+            </navigator>
+            <navigator class="navPlacesToPolyline" hoverClass="none" url="polyline?latitude={{item.latitude}}&longitude={{item.longitude}}&name={{item.name}}">
+                <image class="itemPolyline" src="/resources/icon/location.png"></image>
+            </navigator>
+        </view>
+    </view>
+    <view class="nodata" wx:if="{{showData.length==0}}">
+        <text>没有找到相关地点</text>
+    </view>
+    <view class="search-type other-type">
+    其他搜索结果
+  </view>
+    <view class="placesItem" wx:for="{{poisData}}">
+        <view class="placesItemView">
+            <navigator class="navPlacesToProfile" hoverClass="none" url="polyline?latitude={{poisMarkers[index].latitude}}&longitude={{poisMarkers[index].longitude}}&name={{poisMarkers[index].name}}">
+                <image class="itemImg" mode="scaleToFill" src="{{item.photos[0].url?item.photos[0].url:placeHolderImg}}"></image>
+                <view class="itemcontent">
+                    <view class="itemName">{{item.name}}</view>
+                    <view class="locationText icon-shouye other-search">{{item.address}}</view>
+                </view>
+            </navigator>
+            <navigator class="navPlacesToPolyline" hoverClass="none" url="polyline?latitude={{poisMarkers[index].latitude}}&longitude={{poisMarkers[index].longitude}}&name={{poisMarkers[index].name}}">
+                <image class="itemPolyline" src="/resources/icon/location.png"></image>
+            </navigator>
+        </view>
+    </view>
+    <button class="btn-feedback" openType="feedback">没有想要的结果？告诉我们</button>
+</scroll-view>
