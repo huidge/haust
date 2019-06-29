@@ -1,0 +1,18 @@
+<view class="ad-view">
+    <ad unitId="adunit-22ea129e6852e88a"></ad>
+</view>
+<view class="favorite">
+    <view class="head">
+        <text>我的收藏 (<text class="num">{{list.length}}</text>)</text>
+    </view>
+    <view class="body">
+        <view class="item" data-id="{{item.id}}" wx:for="{{list}}" wx:key="{{item}}">
+            <view class="item-cover">
+                <navigator url="/pages/textbook-info/textbook-info?id={{item.id}}">
+                    <image class="cover-img" mode="aspectFill" src="{{item.cover}}"></image>
+                </navigator>
+            </view>
+            <view class="item-name">{{item.name}}</view>
+        </view>
+    </view>
+</view>

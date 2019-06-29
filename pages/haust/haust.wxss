@@ -5,7 +5,7 @@
   width: 110%;
 }
 .slide-image{
-  height: 500rpx;
+  height: 700rpx;
   width: 100%;
 }
 .head_text{

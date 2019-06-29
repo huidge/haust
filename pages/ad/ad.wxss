@@ -1,0 +1,9 @@
+/* pages/ad/ad.wxss */
+.img{
+  display: block;
+  float:unset;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:10%;
+  margin-bottom:10%;
+}

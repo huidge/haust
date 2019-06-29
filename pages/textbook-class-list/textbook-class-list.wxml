@@ -1,0 +1,37 @@
+<view class="list">
+    <view class="head">
+        <text>{{name}} (共 {{list.length}} 本）</text>
+    </view>
+    <view class="body">
+        <block wx:for="{{list}}" wx:key="{{item}}">
+            <block wx:if="{{index==0}}">
+                <view bindtap="toInfo" class="item" data-id="{{item.id}}">
+                    <view class="left">
+                        <image class="cover-image" mode="aspectFill" src="{{item.cover}}"></image>
+                    </view>
+                    <view class="right">
+                        <view class="item-name">{{item.name}}</view>
+                        <view class="item-desc">作者：{{item.author}}</view>
+                        <view class="item-desc">出版社：{{item.publisher}}</view>
+                        <view class="item-desc">已分享
+              <text class="num">{{item.share_num}}</text> 次
+            </view>
+                    </view>
+                </view>
+            </block>
+            <view bindtap="toInfo" class="item" data-id="{{item.id}}" wx:else>
+                <view class="left">
+                    <image class="cover-image" mode="aspectFill" src="{{item.cover}}"></image>
+                </view>
+                <view class="right">
+                    <view class="item-name">{{item.name}}</view>
+                    <view class="item-desc">作者：{{item.author}}</view>
+                    <view class="item-desc">出版社：{{item.publisher}}</view>
+                    <view class="item-desc">已分享
+              <text class="num">{{item.share_num}}</text> 次
+            </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

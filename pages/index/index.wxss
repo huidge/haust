@@ -37,13 +37,15 @@ page {
 .button {
   width: 145rpx;
   height: 145rpx;
-  margin: 20px;
+  margin: 80px 20px;
   background-color:#02379c;
   border-radius: 80rpx;
   display: flex;
   justify-content: center;
   -webkit-animation: scaleDraw 5s ease-in-out infinite;
+  
 }
+
 
 .button text {
   width: 55%;
@@ -72,10 +74,22 @@ page {
   border-radius: 80rpx;
 }
 
-.float_img {
+.float_share {
   width: 70rpx;
   height: 70rpx;
   float:right;
   margin-right: -12rpx;
   margin-top: 15rpx;
+}
+.float_contact {
+  width: 70rpx;
+  height: 70rpx;
+  float:right;
+  margin-right: -12rpx;
+  margin-top: 15rpx;
+}
+
+.form{
+  display: block;
+  height: 500rpx;
 }

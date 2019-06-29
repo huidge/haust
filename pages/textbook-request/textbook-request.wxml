@@ -1,0 +1,16 @@
+<view class="form">
+    <view class="title">请填写以下信息</view>
+    <view class="cells">
+        <view class="cell">
+            <view class="label">书名</view>
+            <input bindinput="bindName" class="input" placeholder="请输入书名" value="{{name}}"></input>
+        </view>
+        <view class="cell">
+            <view class="label">作者</view>
+            <input bindinput="bindAuthor" class="input" placeholder="请输入作者" value="{{author}}"></input>
+        </view>
+    </view>
+    <view class="btn-area">
+        <button bindtap="save" class="btn">保存</button>
+    </view>
+</view>

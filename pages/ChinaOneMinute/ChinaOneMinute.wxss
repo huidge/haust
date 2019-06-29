@@ -1,0 +1,14 @@
+/* pages/ChinaOneMinute/ChinaOneMinute.wxss */
+page{
+  background-color: black;
+}
+.title{
+  font-size:20px;
+  color: white;
+  margin-left: 30px;
+}
+video{
+  height:250px;
+  width:90%;
+  margin: 20px;
+}

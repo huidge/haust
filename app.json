@@ -1,20 +1,75 @@
 {
-  "pages":[
+  "pages": [
+    "pages/haust/haust",
     "pages/index/index",
+    "pages/hausterhelper/index",
+    "pages/minsu/detail",
+    "pages/fellow/fellow",
+    "pages/word/word",
+    "pages/ChinaOneMinute/ChinaOneMinute",
+    "pages/dailyNews/dailyNews",
+    "pages/ad/ad",
+    "pages/personal/personal",
     "pages/navigation/navigation",
     "pages/navigation/detail",
     "pages/navigation/polyline",
     "pages/navigation/search",
-    "pages/haust/haust",
     "pages/form/form",
     "pages/map/map",
-    
-    "pages/logs/logs"
+    "pages/ence_push/ence_push",
+    "pages/logs/logs",
+    "pages/textbook/textbook",
+    "pages/textbook-category-list/textbook-category-list",
+    "pages/textbook-class-list/textbook-class-list",
+    "pages/textbook-info/textbook-info",
+    "pages/textbook-chapter/textbook-chapter",
+    "pages/textbook-favorite/textbook-favorite",
+    "pages/textbook-search/textbook-search",
+    "pages/textbook-request/textbook-request"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#02379c",
     "navigationBarTitleText": "河南科技大学",
-    "navigationBarTextStyle":"white"
-  }
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#02379c",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/home.png",
+        "selectedIconPath": "assets/home-HL.png"
+      },
+      {
+        "pagePath": "pages/hausterhelper/index",
+        "text": "小助手",
+        "iconPath": "assets/helper.png",
+        "selectedIconPath": "assets/helper-HL.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "我的",
+        "iconPath": "assets/personal.png",
+        "selectedIconPath": "assets/personal-HL.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx2f75a5c0f1fd18d7",
+    "wx3adc470a3de61b9f",
+    "wx18a2ac992306a5a4",
+    "wx9a096e83d187e01f",
+    "wx0adf72aca94ebd61",
+    "wx1e954460873ac40d"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于为您导航、规划路线"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
 }

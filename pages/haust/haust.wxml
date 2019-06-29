@@ -1,3 +1,6 @@
+<import src="/pages/template/template.wxml" />
+<template wx:if="{{onlineTier}}" is="{{onlineData.line_type == 1 ? 'onLineTierText' : 'onLineTierPic'}}" data="{{onlineData}}"></template>
+
 <swiper class="swiper" indicator-dots='true' autoplay='true' indicator-color='rgba(0,0,0,.3)' indicator-active-color='#fff' interval='3000' duration='1000' circular='true'>
   <block wx:for="{{imgUrls}}" wx:key="*this">
     <swiper-item>
@@ -39,3 +42,4 @@
 站在新的历史起点上，河南科技大学将牢记李克强总理的殷切嘱托和省委、省政府的战略部署，以建设“国内先进、具有自身特色的高水平综合性大学”为目标，重仁爱之心创建育人好环境，顺学者之意唱响发展主旋律，把学校真正办成“学生的大学、学者的大学、崇尚学术的大学、具有一流学风的大学”，圆满完成党和人民赋予的人才培养、科学研究、社会服务、文化传承创新和国际交流合作的光荣任务，为国家和地方经济社会发展，为全面建成小康社会和中华民族伟大复兴的“中国梦”做出新的更大的贡献！（更新到2018年2月）
 </text>
 </view>
+<ad unit-id="adunit-29c87f6e7a4a8b63"></ad>

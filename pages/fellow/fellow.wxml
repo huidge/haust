@@ -1,0 +1,209 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class="page">
+          <!--
+            <view class="page__hd">
+              <view class="page__title">校友信息查询</view>
+              <view class="page__desc">内测版-Beta</view>
+            </view>
+          -->
+            <view class="search-nav">
+              <view class="view">
+                <icon size="24" type="search" bindtap="checksno"></icon>
+                <input focus='true' type="text" maxlength="20" placeholder="请输入姓名" value="{{value}}" bindinput='check' class="input" />
+                <icon bindtap="onClearTxt" class="clean" color="#D0D0D0" size="24" type="clear" wx:if="{{isShowBtn}}"></icon>
+              </view>
+            </view>
+            <scroll-view hidden="{{hidden}}" scroll-y  style="height: 850rpx;">
+            <wux-cell-group title="">
+              <block wx:for="{{items}}" wx:key="{{item.XH}}">
+                <wux-cell title="{{item.XM}}|{{item.XH}}" is-link bindtap="search" data-sno="{{item.XH}}"></wux-cell>
+              </block>
+            </wux-cell-group>
+            </scroll-view>
+            <!--
+    <view class="weui-btn-area">
+        <button class="weui-btn" bindtap="search2" type="primary">查询</button>
+    </view>
+-->
+            <view class="page__bd" wx:if="{{list}}">
+              <view class="weui-cells__title">
+                <view bindtap="queryScore" style="float:right"></view>
+              </view>
+              
+              <view class="weui-cells">
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                        <view class="weui-label">学号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                    <input class="weui-input" name="id_number" type="text" value="{{list.XH}}"></input>
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="name" type="text" value="{{list.XM}}"></input>
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">性别</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="sex" type="text" value="{{list.XB}}"></input>
+                  </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">班级</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="class" type="text" value="{{list.BJMC}}"></input>
+                  </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">专业</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="major" type="text" value="{{list.ZYMC}}"></input>
+                  </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">学院</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="college" type="text" value="{{list.DWMC}}"></input>
+                  </view>
+                </view>
+
+              </view>
+              <!--
+            <view class="weui-btn-area">
+                <button class="weui-btn" open-type="share" type="warn">分享</button>
+            </view>
+            -->
+
+            </view>
+            <view bindtap="author" class="weui-cells__tips" style="padding-bottom: 5px;text-align: center;">开发者:huidge</view>
+            <view class="weui-cells__tips" style="padding-bottom: 5px;text-align: center;">免责声明：数据来源于网络，仅供参考</view>
+          </view>
+
+        </view>
+
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="page">
+          <!--
+            <view class="page__hd">
+              <view class="page__title">校友信息查询</view>
+              <view class="page__desc">内测版-Beta</view>
+            </view>
+          -->
+            <view class="search-nav">
+              <view class="view">
+                <icon size="24" type="search" bindtap="checksno"></icon>
+                <input type="number" maxlength="20" placeholder="请输入学号" value="{{sno}}" bindinput='checksno' class="input" />
+                <icon bindtap="onClearTxt" class="clean" color="#D0D0D0" size="24" type="clear" wx:if="{{isShowBtn}}"></icon>
+              </view>
+            </view>
+
+            <view class="weui-btn-area">
+            <button class="weui-btn" bindtap="search" data-sno="{{sno}}" type="primary">查询</button>
+            </view>
+
+            <view class="page__bd" wx:if="{{list}}">
+              <view class="weui-cells__title">
+                <view bindtap="queryScore" style="float:right"></view>
+              </view>
+              
+              <view class="weui-cells">
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                        <view class="weui-label">学号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                    <input class="weui-input" name="id_number" type="text" value="{{list.XH}}"></input>
+                    </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="name" type="text" value="{{list.XM}}"></input>
+                  </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">性别</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="sex" type="text" value="{{list.XB}}"></input>
+                  </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">班级</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="class" type="text" value="{{list.BJMC}}"></input>
+                  </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">专业</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="major" type="text" value="{{list.ZYMC}}"></input>
+                  </view>
+                </view>
+
+                <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                    <view class="weui-label">学院</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                    <input class="weui-input" disabled='true' name="college" type="text" value="{{list.DWMC}}"></input>
+                  </view>
+                </view>
+
+              </view>
+              <!--
+            <view class="weui-btn-area">
+                <button class="weui-btn" open-type="share" type="warn">分享</button>
+            </view>
+            -->
+
+            </view>
+            <view bindtap="author" class="weui-cells__tips" style="padding-bottom: 10px;text-align: center;">开发者:huidge</view>
+            <view class="weui-cells__tips" style="padding-bottom: 10px;text-align: center;">免责声明：数据来源于网络，仅供参考</view>
+          </view>
+
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

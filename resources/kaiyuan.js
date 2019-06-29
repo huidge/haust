@@ -1,7 +1,7 @@
 module.exports.navigation = [ {
     name: "教学楼",
     scale: 16,
-    data: [{
+  data: [ {
         id: 1,
         name: "公教1号楼",
         latitude:34.602243,
@@ -904,6 +904,17 @@ module.exports.navigation = [ {
         img: "https://raw.githubusercontent.com/huidge/haust/master/image/location.png",
         profile: "",
         description: "<p>南门</p>"
-    }]
+      }, {
+        id: 0,
+        name: "大学城青年公寓",
+        latitude: 34.610213,
+        longitude: 112.414454,
+        iconPath: "/resources/icon/location_icon/宾馆.png",
+        width: 35,
+        height: 43,
+        img: "https://img.meituan.net/phoenix/440ed518696270255f47ee828603ad62416400.jpg@1440w_962h_1e_1c_1l",
+        profile: "学长开的一家民宿",
+        description: "<p>HelloWorld青年旅舍(18437952970)<br/> 　地址：龙翔街北段文庭雅苑小区3单元1801</p>"
+      }]
 }
 ];

@@ -1,0 +1,31 @@
+<swiper class="swiper_class" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="*">
+    <swiper-item>
+      <image bindtap="navigate" src="{{item}}" class="slide-image" width="355" height="150"/>
+    </swiper-item>
+
+  </block>
+</swiper>
+
+<image bindtap="close" wx:if="{{showtips}}" class="top-tip" src="../../images/top-tip.gif"></image>
+
+<view class="wx-app-infos">
+    <image class="wx-app-head" src="http://wx.qlogo.cn/mmopen/bk8a2tGD7YiauN658NsdCyxJibRiaeI5WIXRq2SydNbNdJL4OxAIgbXuictrmwdbNO4wTzKPTknTccMVliczMhy7oak5hhIHSL3yo/0"  />
+    <view class="text">
+    <view class="title">Hauster小助手</view>
+    <view class="slogan">校园生活好帮手</view>
+    </view>
+</view>
+<wux-grids square>
+<navigator wx:for="{{ads}}" wx:if="{{item.show}}" wx:key="*" app-id="{{item.appid}}" target="{{item.target}}" path="{{item.path}}" url="{{item.url}}"><wux-grid thumb="{{item.logo}}" label="{{item.title}}"/></navigator>
+<!--
+<navigator target="self" open-type="navigate" url="../minsu/detail?sld=0&sl=0" version="release"><wux-grid thumb="../../images/minsu.png" label="住民宿"/></navigator>
+<navigator target="self" open-type="navigate" url="../zkz/zkz" version="release"><wux-grid thumb="../../images/zkz.png" label="准考证预存"/>
+            </navigator>
+   <wux-grid thumb="../../images/wifi.png" label="连wifi" bind:click="wifi"/>
+-->
+        </wux-grids>
+
+<wux-floating-button id="wux-floating-button" visible="{{ visible }}" position="{{ position }}" theme="{{ theme }}" buttons="{{ buttons }}" bind:change="bindchange" bind:click="buttonClicked" />
+

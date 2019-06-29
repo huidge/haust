@@ -1,0 +1,29 @@
+<view class="clazz">
+    <view class="head">
+        <text>{{name}}</text>
+    </view>
+    <view class="body">
+        <view bindtap="toClazz" class="item" data-id="{{item.id}}" wx:for="{{clazz}}" wx:key="{{item}}">{{item.name}}</view>
+    </view>
+</view>
+
+<view class="hot">
+    <view class="head">
+        <text>分类热门答案</text>
+    </view>
+    <view class="body">
+        <view bindtap="toInfo" class="item" data-id="{{item.id}}" wx:for="{{hot}}" wx:key="{{item}}">
+            <view class="left">
+                <image class="cover-image" mode="aspectFill" src="{{item.cover}}"></image>
+            </view>
+            <view class="right">
+                <view class="item-name">{{item.name}}</view>
+                <view class="item-desc">作者：{{item.author}}</view>
+                <view class="item-desc">出版社：{{item.publisher}}</view>
+                <view class="item-desc">已分享
+          <text class="num">{{item.share_num}}</text> 次
+        </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,6 +1,0 @@
-<view class="qts-kf" wx:if="{{isShow}}" animation="{{animationMain}}" catchtouchmove='menuMainMove' style='top:{{pos.top}}px;left:{{pos.left}}px;'>
-<view class="floating_button">
-  <image src="../../image/contact.png"></image>
-  <button type="button" open-type="contact" name="button"></button>
-  </view>
-</view>

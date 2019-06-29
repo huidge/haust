@@ -1,0 +1,13 @@
+{  
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#02379c",
+    "navigationBarTitleText": "科大小助手",
+    "navigationBarTextStyle": "white",
+    "usingComponents": {
+      "wux-floating-button": "../../dist/floating-button/index",
+      "wux-icon": "../../dist/icon/index",
+      "wux-grids": "../../dist/grids/index",
+      "wux-grid": "../../dist/grid/index",
+      "xm-ad": "/components/xmAD/xmAD"
+    }
+  }

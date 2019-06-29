@@ -1,0 +1,185 @@
+page {
+    background-color: FDE110;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.header-card {
+    margin-top: 42rpx;
+    width: 618rpx;
+    height: 320rpx;
+    border-radius: 16rpx;
+    box-shadow: 0 16rpx 48rpx rgba(0,0,0,.08);
+    background-color: white;
+    z-index: 99;
+}
+
+.header-card-image {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    width: 180rpx;
+    height: 180rpx;
+    margin-top: 40rpx;
+    border-radius: 50%;
+}
+
+.userinfo-nickname {
+    margin-top: 10rpx;
+    font-size: 28rpx;
+    color: #868686;
+}
+
+.userinfo button::after {
+    border: none;
+}
+
+.button-class {
+    background: none;
+    border: none;
+    height:70rpx;
+    background-color:#02379c;
+    color:white;
+}
+
+.more-action-container {
+    background-color: #fff;
+    margin-top: 100rpx;
+    padding-bottom: 10rpx;
+    color: black;
+}
+
+.more-action-container button {
+    border-radius: 0;
+    background: #fff;
+    text-align: left;
+}
+
+.more-action-container button::after {
+    border: none;
+}
+
+.action-container {
+    position: relative;
+    line-height: 120rpx;
+    padding-left: 152rpx;
+    color: #7D7D7D;
+    font-size: 34rpx;
+}
+
+.action-container .action-icon {
+    position: absolute;
+    width: 72rpx;
+    top: 20rpx;
+}
+
+.action-icon {
+    left: 56rpx;
+}
+
+.arrow-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    top: 0;
+    right: 47rpx;
+}
+
+.arrow {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.bottom-tip {
+    text-align: center;
+    margin-top: 130rpx;
+    font-size: 26rpx;
+}
+
+.combine-alert {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.alert-container {
+    opacity: 1;
+    width: 600rpx;
+    position: relative;
+    margin-top: 200rpx;
+}
+
+.alert-container .close {
+    position: absolute;
+    width: 50rpx!important;
+    height: 50rpx!important;
+    right: 20rpx;
+    top: 25rpx;
+}
+
+.alert-container .big {
+    width: 100%;
+    border-radius: 35rpx;
+    background-color: white;
+    padding: 16rpx 0 48rpx;
+}
+
+.big .icon-container {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-container image {
+    width: 128rpx;
+    height: 128rpx;
+}
+
+.big .title {
+    font-size: 40rpx;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 46rpx;
+}
+
+.big .content {
+    font-size: 30rpx;
+    text-align: center;
+    margin: 0 46rpx;
+}
+
+.big .btn {
+    background-color: #01a9f4;
+    color: white;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 88rpx;
+    border-radius: 48rpx;
+    margin: 48rpx 38rpx 0;
+}
+
+.big .sub-content {
+    color: #848484;
+    font-size: 28rpx;
+    margin: 0 46rpx;
+}

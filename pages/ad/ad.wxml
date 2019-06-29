@@ -1,0 +1,5 @@
+<!--pages/ad/ad.wxml-->
+
+<navigator target="miniProgram" open-type="navigate" app-id="wx18a2ac992306a5a4" path="pages/apps/largess/detail?id=62YIN9qnb9A%3D" version="release">
+<image src='https://www.huidge.top/images/reward.jpg' mode='aspectFit' class="img"></image>
+</navigator>

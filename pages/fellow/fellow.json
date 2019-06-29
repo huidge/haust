@@ -1,0 +1,10 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#000",
+  "navigationBarTitleText": "校友信息查询",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index"
+  }
+}

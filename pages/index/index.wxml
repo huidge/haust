@@ -1,16 +1,81 @@
-  <view class="button_container">
-    <navigator class="button" url="../haust/haust">
-      <text>科大简介</text>
-    </navigator>
-    <navigator class="button" url="../navigation/navigation">
-      <text>逛逛科大</text>
-    </navigator>
+<import src="/pages/template/template.wxml" />
+<template wx:if="{{onlineTier}}" is="{{onlineData.line_type == 1 ? 'onLineTierText' : 'onLineTierPic'}}" data="{{onlineData}}"></template>
+
+<view class="button_container">
+  <view style="position:relative">
+    <form bindsubmit="pushFormSubmit" report-submit="true">
+
+      <view class="button">
+        <button style='-webkit-transform: scale(0.5);transform:scale(1);content:"";height:180rpx; width: 250rpx;border:1px solid transparent;background-color:transparent; position: absolute; top: 0; left: 10' plain="true" formType="submit" bindtap="toIntroduce">
+        </button>
+        <text>科大简介</text>
+      </view>
+
+    </form>
+    <form  bindsubmit="pushFormSubmit" report-submit="true">
+      <view class="button">
+        <button style='-webkit-transform: scale(0.5);transform:scale(1);content:"";height:150rpx; width: 200rpx;border:1px solid transparent;background-color:transparent; position: absolute; top: 0; left: 10' plain="true" formType="submit" bindtap="toNavigator">
+        </button>
+        <text>逛逛科大</text>
+      </view>
+
+    </form>
+    <!--
+    <form bindsubmit="pushFormSubmit" report-submit="true">
+
+      <navigator target="miniProgram" open-type="navigate" app-id="wx9a096e83d187e01f" version="release">
+        <view class="button">
+          <button style='-webkit-transform: scale(0.5);transform:scale(1);content:"";height:150rpx; width: 200rpx;border:1px solid transparent;background-color:transparent; position: absolute; top: 0; left: 10' plain="true" formType="submit">
+          </button>
+          <text>空闲教室</text>
+        </view>
+      </navigator>
+
+    </form>
+     <form bindsubmit="pushFormSubmit" report-submit="true">
+
+      <navigator target="miniProgram" open-type="navigate" app-id="wx9a096e83d187e01f" version="release">
+        <view class="button">
+          <button style='-webkit-transform: scale(0.5);transform:scale(1);content:"";height:150rpx; width: 200rpx;border:1px solid transparent;background-color:transparent; position: absolute; top: 0; left: 10' plain="true" formType="submit">
+          </button>
+          <text>校历查询</text>
+        </view>
+      </navigator>
+
+    </form>
+
+    <form bindsubmit="pushFormSubmit" report-submit="true">
+
+      <view class="button" style="background-color:{{color}}">
+
+      <view class="button">
+        <button style='-webkit-transform: scale(0.5);transform:scale(1);content:"";height:150rpx; width: 200rpx;border:1px solid transparent;background-color:transparent; position: absolute; top: 0; left: 10' plain="true" formType="submit" bindtap="toAnswer">
+        </button>
+        <text>大学答案</text>
+      </view>
+
+    </form>
+    -->
   </view>
+</view>
+<!--
+<view bindtap="testDetails" class="button" style="position:relative">
+  <form bindsubmit="pushFormSubmit" report-submit='true'>
+    <button style='-webkit-transform: scale(0.5);transform:scale(1);content:"";height:90rpx; width: 100%;border:1px solid transparent;background-color:transparent; position: absolute; top: 0; left: 0' plain="true" formType="submit"></button>
+  </form>
+</view>
 
+//分享
 <button open-type="share" class="float_button_share">
-<image class="float_img"  src='../../image/share.png'></image>
+  <image class="float_share" src='../../image/share.png'></image>
 </button>
 
+//客服
 <button open-type="contact" class="float_button_contact">
-<image class="float_img"  src='../../image/contact.png'></image>
+  <image class="float_contact" src='../../image/contact.png'></image>
 </button>
+
+<navigator class="float_button_contact" target="miniProgram" open-type="navigate" app-id="wx8abaf00ee8c3202e" extra-data="{{extraData}}" version="release">
+<image class="float_contact"  src='../../image/contact.png'></image>
+</navigator>
+-->

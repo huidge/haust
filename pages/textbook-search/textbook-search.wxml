@@ -1,0 +1,39 @@
+<view class="">
+    <view class="search-from">
+        <view class="from-input">
+            <icon class="search-icon" size="24" type="search"></icon>
+            <input bindconfirm="search" class="search-input" confirmType="search" placeholder="输入关键字" type="text" value="{{key}}"></input>
+        </view>
+        <text bindtap="cancel" class="cancel-btn">取消</text>
+    </view>
+    <view class="hot" wx:if="{{!is_search}}">
+        <view class="head">
+            <text>热门搜索</text>
+        </view>
+        <view class="body">
+            <view bindtap="tagSearch" class="item" data-id="{{item.id}}" data-name="{{item.name}}" wx:for="{{hot_tag}}" wx:key="{{item}}">{{item.name}}</view>
+        </view>
+    </view>
+    <view class="data" wx:if="{{is_search}}">
+        <view class="head">
+      找到相关结果
+      <text class="num">{{total}}</text> 条
+    </view>
+        <view class="no-result" wx:if="{{total==0}}">
+            <text>没有找到你要的教材，你可以填写要找的教材信息，并在之后登录查看，我们将为你寻找该答案。</text>
+            <button bindtap="toRequest" class="request-btn">求答案</button>
+        </view>
+        <view class="body">
+            <view bindtap="toInfo" class="item" data-id="{{item.id}}" wx:for="{{textbookList}}" wx:key="{{item}}">
+                <view class="left">
+                    <image class="cover-image" mode="aspectFill" src="{{item.cover}}"></image>
+                </view>
+                <view class="right">
+                    <view class="item-name">{{item.name}}</view>
+                    <view class="item-desc">作者：{{item.author}}</view>
+                    <view class="item-desc">出版社：{{item.publisher}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

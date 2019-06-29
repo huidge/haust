@@ -1,0 +1,32 @@
+<view bindtap="toSearch" class="search-view" wx:if="{{true}}">
+    <text class="search-text">请输入名称搜索</text>
+    <icon class="search-icon" size="24" type="search"></icon>
+</view>
+<view class="category">
+    <view class="head">
+        <text>按分类查找</text>
+    </view>
+    <view class="body">
+        <view bindtap="toCategory" class="item" data-id="{{item.id}}" wx:for="{{category}}" wx:key="{{item}}">{{item.name}}</view>
+    </view>
+</view>
+<view class="hot">
+    <view class="head">
+        <text>热门答案</text>
+    </view>
+    <view class="body">
+        <view bindtap="toInfo" class="item" data-id="{{item.id}}" wx:for="{{hot}}" wx:key="{{item}}">
+            <view class="left">
+                <image class="cover-image" mode="aspectFill" src="{{item.cover}}"></image>
+            </view>
+            <view class="right">
+                <view class="item-name">{{item.name}}</view>
+                <view class="item-desc">作者：{{item.author}}</view>
+                <view class="item-desc">出版社：{{item.publisher}}</view>
+                <view class="item-desc">已分享
+          <text class="num">{{item.share_num}}</text> 次
+        </view>
+            </view>
+        </view>
+    </view>
+</view>

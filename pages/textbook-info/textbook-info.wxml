@@ -1,0 +1,38 @@
+<view class="info">
+    <view class="head">
+        <text>{{textbook.name}}</text>
+    </view>
+    <view class="body">
+        <view class="left">
+            <image bindtap="viewCover" class="cover-image" data-src="{{textbook.cover}}" mode="aspectFill" src="{{textbook.cover}}"></image>
+        </view>
+        <view class="right">
+            <view class="item-desc">作者：{{textbook.author}}</view>
+            <view class="item-desc">出版社：{{textbook.publisher}}</view>
+            <view class="item-desc">ISBN：{{textbook.isbn}}</view>
+            <view class="btn-area">
+                <button bindtap="deleteTextbook" class="btn-delete" wx:if="{{is_add==true}}">取消收藏</button>
+                <button bindtap="addTextbook" class="btn-add" wx:else>收藏</button>
+                <button class="btn-right" openType="share">分享</button>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="list">
+    <view class="head">
+        <view class="left">章节目录</view>
+        <view class="right">共
+      <text class="num">{{textbook.list.length}}</text> 章节</view>
+    </view>
+    <view class="body">
+        <view bindtap="toChapter" class="item" data-id="{{item.id}}" data-index="{{index}}" wx:for="{{textbook.list}}" wx:key="{{item}}">
+            <view class="left">
+                <view class="item-index">{{item.index}}</view>
+            </view>
+            <view class="right">
+                <view class="item-name">{{item.title}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<navigator class="index-btn" openType="switchTab" url="/pages/textbook/textbook">首页</navigator>

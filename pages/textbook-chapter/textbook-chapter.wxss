@@ -1,0 +1,34 @@
+@import "../../wxParse/wxParse.wxss";
+
+.title {
+    padding: 10px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.chapter-content {
+    width: 96%;
+    height: auto;
+    margin: 0 auto;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.chapter-content image {
+    display: inline-block;
+    width: 100%;
+}
+
+.footer {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer text {
+    padding: 0 0.34em;
+    font-size: 12px;
+}

@@ -1,0 +1,62 @@
+
+<swiper class="swiper_class" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image bindtap="navigate" src="{{item}}" class="slide-image" width="355" height="150"/>
+      <text class="copyright">{{title}}</text>
+      <text class="date">{{month}}.{{day}}</text>
+    </swiper-item>
+  </block>
+</swiper>
+<!--
+<view class="swiper_class">
+<image bindtap="navigate" src="{{url}}" class="slide-image" width="355" height="150"/>
+<text class="title">{{title}}</text>
+<text class="date">{{month}}.{{day}}</text>
+<text class="copyright">{{copyright}}</text>
+</view>
+-->
+<!--
+<scroll-view class="list-container" scroll-y style="height:400px;">
+-->
+<block wx:for="{{list}}"   wx:key="*this">
+<view class="list" >
+<view class="item">
+<text>☀ {{item}}</text>
+</view>
+</view>
+</block>
+<!--
+</scroll-view>
+-->
+
+<!--
+<view class="button">
+<navigator url='../news/news'>
+<image class="morning" src='../../images/morning_selected.png'></image>
+<text class="title_selected">今日早报</text>
+</navigator>
+
+<navigator url='../networkHotspots/networkHotspots'>
+<image class="morning" src='../../images/hotspot.png'></image>
+<text class="title">网络热点</text>
+</navigator>
+</view>
+
+
+<view bindtap="showShareModal" class="share-tips" wx:if="{{!shareStatus}}">
+    <image mode="widthFix" src="../../images/hongbao.png"></image>
+</view>
+
+<view class="black-cover" hidden="{{!shareModalShow}}"></view>
+
+<view class="share-modal" hidden="{{!shareModalShow}}">
+    <view class="share-content">推荐该小程序到群聊后即可领取红包，最高可得888元，每天都有。</view>
+    <view class="share-btn-area">
+        <button bindtap="cancelShare" size="mini" type="default">取消</button>
+        <button class="confirm-share-btn" openType="share" size="mini" type="primary">确认</button>
+    </view>
+</view>
+
+-->

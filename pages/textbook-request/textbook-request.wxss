@@ -1,0 +1,41 @@
+.form {
+    margin: 15px;
+}
+
+.title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #999;
+    font-size: 16px;
+}
+
+.cells {
+    position: relative;
+    margin-top: 15px;
+    background: #fff;
+    font-size: 16px;
+}
+
+.cell {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    width: 180rpx;
+}
+
+.btn-area {
+    margin: 15px;
+}
+
+.btn {
+    background: #00aeef;
+    color: #fff;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+}

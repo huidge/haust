@@ -1,0 +1,98 @@
+/**index.wxss
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}**/
+.top-tip{
+  position: absolute;
+  top:-15px;
+  width:100%;
+  height:100rpx;
+}
+.swiper_class{
+	height:400rpx;
+}
+.slide-image{
+	height:500rpx;
+	width:100%;
+}
+.wx-app-infos{
+    position: absolute;
+    left: 50rpx;
+    top:200rpx;
+    height: .90625rem;
+    color: #fff;
+}
+
+.wx-app-head{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+}
+.text{
+  position: absolute;
+  width: 255rpx;
+  left:60px;
+  top:0px;
+}
+.tittle{
+  font-size: 40rpx;
+  margin: 10px;
+}
+.slogan{
+  font-size: 30rpx;
+}
+
+/* pages/schedule/schedule.wxss */
+#panel{
+  background:#fff;
+}
+
+#panel view{
+  line-height: 25rpx;
+}
+
+#panel text{
+  line-height: 250rpx;
+  border-right: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.flex-cell{
+  flex: 1;
+}

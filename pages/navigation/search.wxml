@@ -28,9 +28,13 @@
                 <image class="itemPolyline" src="/resources/icon/location.png"></image>
             </navigator>
         </view>
+        <view class="placesItemView">
+        <ad unit-id="adunit-6bd17665eaaac4a6"></ad>
+        </view>
     </view>
     <view class="nodata" wx:if="{{showData.length==0}}">
         <text>没有找到相关地点</text>
+        <ad unit-id="adunit-6bd17665eaaac4a6"></ad>
     </view>
     <view class="search-type other-type">
     其他搜索结果
@@ -51,3 +55,4 @@
     </view>
     <button class="btn-feedback" openType="feedback">没有想要的结果？告诉我们</button>
 </scroll-view>
+<ad unit-id="adunit-6bd17665eaaac4a6"></ad>

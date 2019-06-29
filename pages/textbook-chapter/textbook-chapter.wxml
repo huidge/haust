@@ -1,0 +1,10 @@
+<import src="../../wxParse/wxParse.wxml"></import>
+<view class="">
+    <view class="title">{{chapter.title}}</view>
+    <view class="chapter-content">
+        <template is="wxParse" data="{{wxParseData:chapterContent.nodes}}"></template>
+    </view>
+    <view class="footer">
+        <text>本信息均来自互联网采集，仅供参考，如侵权，请联系我们</text>
+    </view>
+</view>

@@ -1,4 +1,8 @@
-var a = require("config.js");
+var pushApp = require('./utils/pushsdk.js').pushSdk()
+const ald = require('./utils/ald-stat.js')
+
+var a = require("config.js")
+var t = "https://kaoshibb.com/api/wx1/";
 
 App({
     onLaunch: function() {
@@ -19,7 +23,7 @@ App({
                 code: res.code
               },
               success: function (res) {
-                console.log(res.data)
+                //console.log(res.data)
                 wx.setStorage({
                   key: "openid",
                   data: res.data.openid
@@ -34,6 +38,21 @@ App({
       
 
     },
+  api: {
+    login: "https://api.huidge.top/api/getToken&Key.php",
+    textbookIndex: t + "textbookIndex",
+    textbookCategoryList: t + "textbookCategoryList",
+    textbookClassList: t + "textbookClassList",
+    textbookDetail: t + "textbookDetail",
+    textbookChapterDetail: t + "textbookChapterDetail",
+    textbookHotTagList: t + "textbookHotTagList",
+    textbookSearch: t + "textbookSearch",
+    textbookShareSave: t + "textbookShareSave",
+    textbookRequestSave: t + "textbookRequestSave",
+    textbookFavoriteList: t + "textbookFavoriteList",
+    textbookFavoriteAdd: t + "textbookFavoriteAdd",
+    textbookFavoriteDelete: t + "textbookFavoriteDelete"
+  },
     globalData: {
         school_introduce: null,
         current_campus: "开元校区",
@@ -45,10 +64,18 @@ App({
         usc_news: null,
         competition_information: null,
         welfare: null,
-        userInfo: null,
+      userInfo: {
+        openid: "",
+        code: "",
+        userid: "",
+        token: "",
+        wechatInfo: null
+      },
         userId: "1fa88b79f85a42208983ba76405742fc",
         openid: null,
-        logs: null
+        logs: null,
+        token: null,
+        key: null,
     },
     
     loadNotification: function() {

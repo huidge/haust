@@ -1,0 +1,83 @@
+<view class="header-container">
+    <image class="header-card-image" mode="widthFix" src="../../assets/my-bg.png"></image>
+    <view class="header-card">
+        <view class="userinfo">
+            <image class="userinfo-avatar" mode="cover" src="../../assets/none-user.png" wx:if="{{!hasUserInfo&&canIUse}}"></image>
+            <image class="userinfo-avatar" mode="cover" src="{{userInfo.avatarUrl}}" wx:else></image>
+            <button bindgetuserinfo="getUserInfo" class="userinfo-nickname button-class" openType="getUserInfo" wx:if="{{!hasUserInfo&&canIUse}}"> 点击登录 </button>
+            <text class="userinfo-nickname" wx:else>{{userInfo.nickName}}</text>
+        </view>
+    </view>
+</view>
+<view class="more-action-container">
+<!--
+    <navigator url="/pages/book-liked/book-liked">
+        <view class="action-container">
+            <image class="action-icon" mode="widthFix" src="../../assets/like.png"></image>
+      我的收藏
+      <view class="arrow-container">
+                <image class="arrow" mode="widthFix" src="../../assets/right-arrow.png"></image>
+            </view>
+        </view>
+    </navigator>
+    <navigator url="/pages/book-ask/book-ask">
+        <view class="action-container">
+            <image class="action-icon" mode="widthFix" src="../../assets/help.png"></image>
+      求答案
+      <view class="arrow-container">
+                <image class="arrow" mode="widthFix" src="../../assets/right-arrow.png"></image>
+            </view>
+        </view>
+    </navigator>
+-->
+     <button class="action-container" openType="share">
+            <image class="action-icon" mode="widthFix" src="../../assets/help.png"></image>
+      分享
+      <view class="arrow-container">
+                <image class="arrow" mode="widthFix" src="../../assets/right-arrow.png"></image>
+      </view>
+    </button>
+    <button class="action-container" openType="contact">
+        <image class="action-icon" mode="widthFix" src="../../assets/kefu.png"></image>
+    联系客服
+    <view class="arrow-container">
+            <image class="arrow" mode="widthFix" src="../../assets/right-arrow.png"></image>
+        </view>
+    </button>
+    <view bindtap="showConnectionAlert" class="action-container">
+        <image class="action-icon" mode="widthFix" src="../../assets/connection.png"></image>
+    关联小程序
+    <view class="arrow-container">
+            <image class="arrow" mode="widthFix" src="../../assets/right-arrow.png"></image>
+        </view>
+    </view>
+</view>
+<view class="combine-alert" style="display: {{combineAlertShowHide}};">
+    <view class="alert-container">
+        <image bindtap="hideAlert" class="close" src="../../assets/close.png"></image>
+        <view class="big">
+            <view class="icon-container">
+                <image mode="widthFix" src="../../assets/popup-icon@3x.png"></image>
+            </view>
+            <view class="title">
+          我们一起关联吧！
+        </view>
+            <view class="content" style="margin-bottom: 20rpx;">
+          你的微信公众号想要与小程序关联在一起吗？
+        </view>
+            <view class="content" style="text-align:left">
+          关联步骤
+        </view>
+            <view class="sub-content">
+                <view class="sub-content-item">1.登陆微信公众号</view>
+                <view class="sub-content-item">2.小程序管理-添加</view>
+                <view class="sub-content-item">3.关联小程序</view>
+                <text class="sub-content-item">4.输入小程序的信息：
+   App ID: wxaa876e25947cb0d1 </text>
+                <view class="sub-content-item">5.提交关联申请。我们收到申请后会尽快确认通过</view>
+                <view class="sub-content-item">6.小哥哥期待各位来撩</view>
+            </view>
+            <view bindtap="copyAppID" class="btn">复制APPID</view>
+        </view>
+    </view>
+</view>

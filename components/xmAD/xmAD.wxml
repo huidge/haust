@@ -1,0 +1,28 @@
+<xm-ad>
+  <!-- banner -->
+  <view wx:if="{{adData[adID].ct===1}}" data-type="1" class="{{adID}}">
+    <view wx:if="{{adData[adID].hasshow}}" style="{{adData[adID].style.wrap}}">
+      <image src="{{adData[adID].imgurl}}" mode="widthFix" data-id="{{adID}}" bindload="adLoad" bindtap="clickAd" style="{{adData[adID].style.img}}"></image>
+      <text wx:if="{{adData[adID].isShowIcon}}" style="{{adData[adID].style.icon}}">小盟广告</text>
+      <navigator wx:if="{{adData[adID].at===3}}" target="miniProgram" data-id="{{adID}}" bindtap="clickAd" bindfail="navFail" path="{{adData[adID].pageurl}}" app-id="{{adData[adID].appid[1]}}" style="{{adData[adID].style.nav}}"></navigator>
+    </view>
+  </view>
+  <!-- 插屏 -->
+  <view wx:if="{{adData[adID].ct===2}}" data-type="2" class="{{adID}}">
+    <view wx:if="{{adData[adID].hasshow}}" data-closeid="{{adID}}" bindtap="close" style="{{adData[adID].style.wrap}}">
+      <view style="{{adData[adID].style.content}}">
+        <image src="{{adData[adID].imgurl}}" mode="widthFix" data-id="{{adID}}" bindload="adLoad" bindtap="clickAd" style="{{adData[adID].style.img}}"></image>
+        <image src="http://www.xmadx.com/sdk/ad_sdk_clone.png" data-closeid="{{adID}}" bindtap="close" style="{{adData[adID].style.close}}"></image>
+        <text wx:if="{{adData[adID].isShowIcon}}" style="{{adData[adID].style.icon}}">小盟广告</text>
+        <navigator wx:if="{{adData[adID].at===3}}" target="miniProgram" data-id="{{adID}}" bindtap="clickAd" bindfail="navFail" path="{{adData[adID].pageurl}}" app-id="{{adData[adID].appid[1]}}" style="{{adData[adID].style.nav}}"></navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 悬浮 -->
+  <view wx:if="{{adData[adID].ct===3}}" data-type="3" class="{{adID}}">
+    <view wx:if="{{adData[adID].hasshow}}" data-closeid="{{adID}}" class="xmad-wrap" style="{{adData[adID].style.wrap}}">
+      <image src="{{adData[adID].imgurl}}" mode="widthFix" data-id="{{adID}}" bindload="adLoad" bindtap="clickAd" style="{{adData[adID].style.img}}"></image>
+      <navigator wx:if="{{adData[adID].at===3}}" target="miniProgram" data-id="{{adID}}" bindtap="clickAd" bindfail="navFail" path="{{adData[adID].pageurl}}" app-id="{{adData[adID].appid[1]}}" style="{{adData[adID].style.nav}}"></navigator>
+    </view>
+  </view>
+</xm-ad>

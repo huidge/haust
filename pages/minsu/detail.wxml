@@ -1,0 +1,27 @@
+<view>
+<swiper class="swiper_class" indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="*">
+    <swiper-item>
+      <image class="exhibition" src="{{item}}"  width="355" height="150"/>
+    </swiper-item>
+
+  </block>
+</swiper>
+    <view class="navgation" bindtap="call">
+        <view class="nav-places-to-polyline" hoverClass="none">
+            <image class="nav-places-to-polyline-img" mode="scaleToFill" src="/resources/icon/call.png"></image>
+        </view>
+    </view>
+    <view style="display:flex;flex-direction: row; justify-content: center;">
+        <text class="location-name" style="width:90%; height:100rpx;">{{name}}</text>
+    </view>
+    <view style="height:30rpx; background-color:#F2F2F2;"></view>
+    <view class="location-description">
+        <text class="subtitle">地点介绍</text>
+    </view>
+    <view class="content">
+        <rich-text class="article-content" nodes="{{description}}"></rich-text>
+    </view>
+    
+</view>

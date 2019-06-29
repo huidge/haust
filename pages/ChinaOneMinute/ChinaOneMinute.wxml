@@ -1,0 +1,7 @@
+<!--pages/ChinaOneMinute/ChinaOneMinute.wxml-->
+<view class="title">一分钟，中国会发生什么？</view>
+<video src="{{url}}" autoplay="true" page-gesture="true"></video>
+<block wx:for="{{urls}}" wx:key="*">
+<view class="title">一分钟，{{item.province}}会发生什么？</view>
+<video src="{{item.url}}" page-gesture="true"></video>
+</block>
